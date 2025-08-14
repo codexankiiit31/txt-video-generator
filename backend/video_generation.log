@@ -1,0 +1,22 @@
+2025-08-15 00:29:28,896 - INFO - VideoGenerator initialized with model: veo-3.0-generate-preview
+2025-08-15 00:29:29,691 - INFO - VideoGenerator initialized with model: veo-3.0-generate-preview
+2025-08-15 00:29:29,692 - INFO - Output directory: ../outputs
+2025-08-15 00:29:29,692 - INFO - Video generator initialized successfully
+2025-08-15 00:34:32,913 - ERROR - Failed to initialize GenAI client: module 'google.genai' has no attribute 'configure'
+2025-08-15 00:34:32,913 - ERROR - Failed to initialize video generator: Failed to initialize GenAI client: module 'google.genai' has no attribute 'configure'
+2025-08-15 00:35:30,209 - ERROR - Failed to initialize GenAI client: module 'google.genai' has no attribute 'configure'
+2025-08-15 00:35:30,216 - ERROR - Failed to initialize video generator: Failed to initialize GenAI client: module 'google.genai' has no attribute 'configure'
+2025-08-15 00:37:44,544 - WARNING - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-08-15 00:37:44,607 - INFO - VideoGenerator initialized with model: veo-3.0-generate-preview
+2025-08-15 00:37:44,607 - INFO - Output directory: ./outputs
+2025-08-15 00:37:44,607 - INFO - Video generator initialized successfully
+2025-08-15 00:38:34,061 - INFO - HTTP Request: GET https://generativelanguage.googleapis.com/v1beta/models "HTTP/1.1 200 OK"
+2025-08-15 00:38:34,075 - INFO - API key validation successful
+2025-08-15 00:40:24,498 - INFO - Received video generation request: a girl running into sky...
+2025-08-15 00:40:24,498 - INFO - Starting video generation with ID: 9bc3092479c0
+2025-08-15 00:40:24,499 - INFO - Cleaned prompt: a girl running into sky...
+2025-08-15 00:40:24,499 - INFO - Starting video generation with Gemini VEO-3 for request 9bc3092479c0
+2025-08-15 00:40:26,337 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/veo-3.0-generate-preview:predictLongRunning "HTTP/1.1 429 Too Many Requests"
+2025-08-15 00:40:26,339 - ERROR - Gemini API call failed: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.', 'status': 'RESOURCE_EXHAUSTED'}}
+2025-08-15 00:40:26,340 - ERROR - Video generation failed after 1.84 seconds: API call failed: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.', 'status': 'RESOURCE_EXHAUSTED'}}
+2025-08-15 00:40:26,340 - ERROR - Video generation failed for ID: 9bc3092479c0 - Video generation failed: API call failed: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.', 'status': 'RESOURCE_EXHAUSTED'}}

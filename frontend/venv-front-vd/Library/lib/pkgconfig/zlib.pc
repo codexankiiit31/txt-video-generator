@@ -1,0 +1,13 @@
+prefix=D:/Final_Project/Txt-video/frontend/venv-front-vd/Library
+exec_prefix=D:/Final_Project/Txt-video/frontend/venv-front-vd/Library
+libdir=D:/Final_Project/Txt-video/frontend/venv-front-vd/Library/lib
+sharedlibdir=D:/Final_Project/Txt-video/frontend/venv-front-vd/Library/lib
+includedir=D:/Final_Project/Txt-video/frontend/venv-front-vd/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
