@@ -1,38 +1,48 @@
-### AI Video Generator
-Transform your text prompts into stunning videos using Stability AI Ultra! This application provides both a beautiful Streamlit web interface and a robust FastAPI backend for generating videos from text descriptions.
+AI Video Generator 🎥✨
+
+Transform your text prompts into stunning videos using Stability AI Ultra! This project provides a beautiful Streamlit web interface and a robust FastAPI backend for generating videos from text descriptions.
+
 ✨ Features
 
-🎨 Text-to-Video Generation: Create videos from detailed text prompts using Stability AI Ultra
-🖥️ Dual Interface: Choose between Streamlit web app or FastAPI REST API
-🎛️ Customizable Settings: Control duration, resolution, style, and more
-📊 Generation History: Track all your creations with metadata
-🔍 Real-time Progress: Monitor generation progress with live updates
-📁 File Management: Download, list, and manage generated videos
-🛡️ Content Safety: Built-in prompt validation and content moderation
-⚡ Enhanced Effects: Dynamic zoom, rotation, and color effects for engaging videos
+🎨 Text-to-Video Generation: Convert detailed text prompts into videos using Stability AI Ultra.
+
+🖥️ Dual Interface: Use either a Streamlit web app or FastAPI REST API.
+
+🎛️ Customizable Settings: Control video duration, resolution, style, and more.
+
+📊 Generation History: Keep track of all created videos with metadata.
+
+🔍 Real-time Progress: Monitor generation status with live updates.
+
+📁 File Management: Download, list, and manage generated videos easily.
+
+🛡️ Content Safety: Built-in prompt validation and moderation.
+
+⚡ Enhanced Effects: Dynamic zoom, rotation, and color effects for engaging results.
 
 🏗️ Project Structure
 ai-video-generator/
 ├── frontend/
-│   └── app.py              # Streamlit web application
+│   └── app.py             # Streamlit web application
 ├── backend/
-│   ├── main.py             # FastAPI server
-│   └── chains.py           # Core video generation logic
-├── outputs/                # Generated video files (auto-created)
-├── requirements.txt        # Python dependencies
-├── .env                    # Environment variables
-└── README.md              # This file
+│   ├── main.py            # FastAPI server
+│   └── chains.py          # Core video generation logic
+├── outputs/               # Generated video files (auto-created)
+├── requirements.txt       # Python dependencies
+├── .env                   # Environment variables
+└── README.md              # Project documentation
 
-└── README.md              # This file
 🚀 Quick Start
-1. Prerequisites
+1️⃣ Prerequisites
 
 Python 3.8 or higher
-Stability AI API key (Get one here)
-Git (for cloning)
 
-2. Installation
-# Clone the repository
+Stability AI API key (Get one here)
+
+Git
+
+2️⃣ Installation
+# Clone repository
 git clone <your-repo-url>
 cd ai-video-generator
 
@@ -40,16 +50,18 @@ cd ai-video-generator
 python -m venv venv
 
 # Activate virtual environment
-# On Windows:
+# Windows:
 venv\Scripts\activate
-# On macOS/Linux:
+# macOS/Linux:
 source venv/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
 
-3. Dependencies
-Create a requirements.txt file with the following dependencies:
+3️⃣ Dependencies
+
+Add these to requirements.txt:
+
 streamlit>=1.28.0
 fastapi>=0.104.0
 uvicorn>=0.24.0
@@ -63,9 +75,11 @@ numpy>=1.24.0
 requests>=2.31.0
 python-multipart>=0.0.6
 
-4. Environment Configuration
+4️⃣ Environment Configuration
+
 Create a .env file in the root directory:
-# Required: Stability AI API Key
+
+# Required
 STABILITY_API_KEY=your_stability_ai_api_key_here
 
 # Optional: Application Settings
@@ -79,7 +93,7 @@ API_PORT=8000
 DEBUG=false
 RELOAD=true
 
-# Optional: Application Metadata
+# Optional: App Metadata
 APP_TITLE=AI Video Generation API
 APP_DESCRIPTION=Generate videos from text prompts using Stability AI
 APP_VERSION=1.0.0
@@ -90,47 +104,57 @@ FORBIDDEN_WORDS=violence,explicit,harmful
 CORS_ORIGINS=*
 CORS_CREDENTIALS=true
 
+5️⃣ Running the API
+# Start FastAPI server
+uvicorn backend.main:app --host 0.0.0.0 --port 8000 --reload
 
-API will be available at http://localhost:8000
 
-Interactive API docs: http://localhost:8000/docs
+API endpoint: http://localhost:8000
+
+Interactive docs: http://localhost:8000/docs
+
 Alternative docs: http://localhost:8000/redoc
 
 🚨 Troubleshooting
-Common Issues
-❌ "API key not found"
 
-Ensure your .env file contains STABILITY_API_KEY=your_key_here
-Check that the .env file is in the root directory
-Verify the API key is valid on Stability AI platform
+"API key not found"
 
-❌ "Video generation failed"
+Ensure .env contains a valid STABILITY_API_KEY
 
-Check your internet connection
-Verify API key has sufficient credits
-Ensure prompt doesn't violate content policy
+Check that .env is in the root directory
 
-❌ "Module not found: chains"
+"Video generation failed"
 
-Ensure chains.py is in the backend directory
-Check Python path configuration
-Try running from the correct directory
+Verify internet connection and API credits
 
-❌ "Connection timeout"
+Ensure the prompt adheres to content policies
 
-Check firewall settings
-Verify Stability AI API is accessible
-Try with a shorter prompt
+"Module not found: chains"
+
+Confirm chains.py exists in the backend/ folder
+
+Run Python from the project root
+
+"Connection timeout"
+
+Check firewall and network settings
+
+Try shorter prompts
 
 🆘 Support
 
-Issues: Report bugs and feature requests on GitHub
-Documentation: Check the /docs endpoint when running the API
-Stability AI: Visit Stability AI Documentation for API details
+Issues: Report bugs or feature requests on GitHub
+
+Documentation: Check /docs endpoint when running the API
+
+Stability AI: Official Documentation
 
 🙏 Acknowledgments
 
-Stability AI for providing the Ultra image generation API
-Streamlit for the beautiful web interface framework
-FastAPI for the high-performance API backend
-OpenCV for video processing capabilities
+Stability AI – Ultra video generation API
+
+Streamlit – Web interface framework
+
+FastAPI – High-performance API backend
+
+OpenCV – Video processing capabilities
