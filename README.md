@@ -1,51 +1,45 @@
-AI Video Generator 🎥✨
+# AI Video Generator 🎥✨
 
-Transform your text prompts into stunning videos using Stability AI Ultra! This project provides a beautiful Streamlit web interface and a robust FastAPI backend for generating videos from text descriptions.
+Transform your text prompts into stunning videos using **Stability AI Ultra**!  
+This project provides a **beautiful Streamlit web interface** and a **robust FastAPI backend** for generating videos from text descriptions.
 
-✨ Features
+---
 
-🎨 Text-to-Video Generation: Convert detailed text prompts into videos using Stability AI Ultra.
+## ✨ Features
 
-🖥️ Dual Interface: Use either a Streamlit web app or FastAPI REST API.
+- 🎨 **Text-to-Video Generation:** Convert detailed text prompts into videos using Stability AI Ultra.  
+- 🖥️ **Dual Interface:** Use either a Streamlit web app or FastAPI REST API.  
+- 🎛️ **Customizable Settings:** Control video duration, resolution, style, and more.  
+- 📊 **Generation History:** Keep track of all created videos with metadata.  
+- 🔍 **Real-time Progress:** Monitor generation status with live updates.  
+- 📁 **File Management:** Download, list, and manage generated videos easily.  
+- 🛡️ **Content Safety:** Built-in prompt validation and moderation.  
+- ⚡ **Enhanced Effects:** Dynamic zoom, rotation, and color effects for engaging results.  
 
-🎛️ Customizable Settings: Control video duration, resolution, style, and more.
+---
 
-📊 Generation History: Keep track of all created videos with metadata.
+## 🏗️ Project Structure
 
-🔍 Real-time Progress: Monitor generation status with live updates.
 
-📁 File Management: Download, list, and manage generated videos easily.
+---
 
-🛡️ Content Safety: Built-in prompt validation and moderation.
+## 🚀 Quick Start
 
-⚡ Enhanced Effects: Dynamic zoom, rotation, and color effects for engaging results.
+### 1️⃣ Prerequisites
 
-🏗️ Project Structure
-ai-video-generator/
-├── frontend/
-│   └── app.py             # Streamlit web application
-├── backend/
-│   ├── main.py            # FastAPI server
-│   └── chains.py          # Core video generation logic
-├── outputs/               # Generated video files (auto-created)
-├── requirements.txt       # Python dependencies
-├── .env                   # Environment variables
-└── README.md              # Project documentation
+- Python 3.8 or higher  
+- Stability AI API key ([Get one here](https://stability.ai))  
+- Git  
 
-🚀 Quick Start
-1️⃣ Prerequisites
+---
 
-Python 3.8 or higher
+### 2️⃣ Installation
 
-Stability AI API key (Get one here)
-
-Git
-
-2️⃣ Installation
+``bash
 # Clone repository
 git clone <your-repo-url>
 cd ai-video-generator
-
+``bash
 # Create virtual environment
 python -m venv venv
 
@@ -56,29 +50,11 @@ venv\Scripts\activate
 source venv/bin/activate
 
 # Install dependencies
-pip install -r requirements.txt
 
-3️⃣ Dependencies
-
-Add these to requirements.txt:
-
-streamlit>=1.28.0
-fastapi>=0.104.0
-uvicorn>=0.24.0
-aiohttp>=3.8.0
-aiofiles>=23.0.0
-python-dotenv>=1.0.0
-pydantic>=2.4.0
-opencv-python>=4.8.0
-Pillow>=10.0.0
-numpy>=1.24.0
-requests>=2.31.0
-python-multipart>=0.0.6
-
-4️⃣ Environment Configuration
+** install -r requirements.txt
+3️⃣ Environment Configuration
 
 Create a .env file in the root directory:
-
 # Required
 STABILITY_API_KEY=your_stability_ai_api_key_here
 
@@ -104,10 +80,8 @@ FORBIDDEN_WORDS=violence,explicit,harmful
 CORS_ORIGINS=*
 CORS_CREDENTIALS=true
 
-5️⃣ Running the API
-# Start FastAPI server
+4️⃣ Running the API
 uvicorn backend.main:app --host 0.0.0.0 --port 8000 --reload
-
 
 API endpoint: http://localhost:8000
 
@@ -158,3 +132,4 @@ Streamlit – Web interface framework
 FastAPI – High-performance API backend
 
 OpenCV – Video processing capabilities
+
